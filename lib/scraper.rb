@@ -4,7 +4,9 @@ require "pry"
 
 html = open("https://www.fws.gov/endangered/news/index.html")
 doc = Nokogiri::HTML(html)
-binding.pry
+
+
+article_elements = doc.css("div.article")
 
 #articles: doc.css("div.article")
 #title: doc.css("h2").text
@@ -25,5 +27,13 @@ def self.all
 end
 
 end
+
+article_elements.each do |article_el|
+  article_el
+  
+  binding.pry
+  
+  
+  
 
 
