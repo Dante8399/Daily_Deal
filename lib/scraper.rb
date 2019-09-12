@@ -10,11 +10,12 @@ require "pry"
 
 class Article
   @@all = []
-  attr_accessor :title, :date
+  attr_accessor :title, :date, :url
   
-  def initialize (title,date)
+  def initialize (title,date,url)
   @title = title
   @date = date
+  @url = url
   @@all << self
 end
 
@@ -22,7 +23,7 @@ end
   @@all
 end
 
-
+end
 
 html = open("https://www.fws.gov/endangered/news/index.html")
 doc = Nokogiri::HTML(html)
@@ -34,7 +35,8 @@ article_elements = doc.css("div.article")
 article_elements.each do |article_el|
   Article.new(
     article_el.css("h2").text, 
-    article_el.css("p.dateline").text
+    article_el.css("p.dateline").text,
+    article_el.css("a").attr('href')
     )
   end
 
