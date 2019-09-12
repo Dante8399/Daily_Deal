@@ -38,7 +38,7 @@ article_elements.each do |article_el|
     article_el.css("p.dateline").text,
     article_el.css("a").attr('href').value
     )
-  end
+  
   
   #In the list of articles array, opens page to provided url for scraping
   Article.all.each do |article|
@@ -46,8 +46,9 @@ article_elements.each do |article_el|
     article.news_sub_title = doc.css('div.NewsSubTitle').text
     #add method to the Article class that represents a variable for some element scraped on this page
     #Call the method (article.whatever) and set it equal to the element on this page
-    binding.pry
+    
   end
+end
   
 
   
