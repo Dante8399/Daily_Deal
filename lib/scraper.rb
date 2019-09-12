@@ -36,7 +36,7 @@ article_elements.each do |article_el|
   Article.new(
     article_el.css("h2").text, 
     article_el.css("p.dateline").text,
-    article_el.css("a").attr('href')
+    article_el.css("a").attr('href').value
     )
   end
 
