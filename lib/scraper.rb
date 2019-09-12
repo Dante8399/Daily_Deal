@@ -10,7 +10,7 @@ require "pry"
 
 class Article
   @@all = []
-  attr_accessor :title, :date, :url
+  attr_accessor :title, :date, :url, :news_sub_title
   
   def initialize (title,date,url)
   @title = title
@@ -43,8 +43,9 @@ article_elements.each do |article_el|
   #In the list of articles array, opens page to provided url for scraping
   Article.all.each do |article|
     doc = Nokogiri::HTML(open(article.url))
+    article.news_sub_title = doc.css('div.NewsSubTitle').text
     #add method to the Article class that represents a variable for some element scraped on this page
-    #Call the method (Article.whatever) and set it equal to the element on this page
+    #Call the method (article.whatever) and set it equal to the element on this page
     binding.pry
   end
   
