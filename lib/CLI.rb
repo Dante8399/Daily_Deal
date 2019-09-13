@@ -3,7 +3,7 @@
 class CLI
   def call
     Scraper.scrape_article_list
-    puts 'welcome, here is a list'
+    puts 'Welcome to the Up-to-date Article List of How the US Governemnt is Working to Preserve Endangered Species'
     puts
     list_articles
 # Runs scraper of initial site that returns list of articles (.scrape_article_list method). Assigned to .call method. First puts some text. Returns a list of articles with list_articles variable (see below).
