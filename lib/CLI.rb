@@ -8,7 +8,7 @@ class CLI
     list_articles
 # Runs scraper of initial site that returns list of articles (.scrape_article_list method). Assigned to .call method. First puts some text. Returns a list of articles with list_articles variable (see below).
     
-    puts 'choose one please:'
+    puts 'Select an Aritcle Number for More Info'
 # Asks for user input to choose an article    
     input = gets.strip
     
@@ -18,7 +18,7 @@ class CLI
 # Scrapes url page of selected article and returns subtitle   
     Scraper.scrape_article(article)
     
-    show_details(article)
+    puts show_details(article)
     
     
     
@@ -27,11 +27,13 @@ class CLI
   def list_articles
 # Returns entire list of articles, with an index, and puts the index (+1) and the article title (from title method in Article class)    
     Article.all.each_with_index do |art, i|
-      puts "#{i + 1}. #{art.title}"
+      puts "#{i + 1}. #{art.date}. #{art.title}"
     end
   end
 # Working  
   def show_details(article)
-    puts   
+   puts "Please visit" 
+   article.url
+    
   end
 end
