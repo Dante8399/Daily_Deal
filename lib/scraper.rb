@@ -13,7 +13,8 @@ class Scraper
       Article.new(
         article_el.css("h2").text, 
         article_el.css("p.dateline").text,
-        article_el.css("a").attr('href').value
+        article_el.css("a").attr('href').value,
+        article_el.css("div.content p").text
       )
     end
   end

@@ -32,8 +32,10 @@ class CLI
   end
 # Working  
   def show_details(article)
-   puts "Please visit" 
-   article.url
+   puts "Article Description:
+   #{article.description}
+   For Complete Article, visit: #{article.url}"
+   
     
   end
 end

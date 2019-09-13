@@ -10,12 +10,13 @@ require "pry"
 
 class Article
   @@all = []
-  attr_accessor :title, :date, :url, :news_sub_title
+  attr_accessor :title, :date, :url, :description, :news_sub_title
   
-  def initialize (title,date,url)
+  def initialize (title,date,url,description)
     @title = title
     @date = date
     @url = url
+    @description = description
     @@all << self
   end
 
