@@ -30,7 +30,7 @@ class CLI
       puts "#{i + 1}. #{art.title}"
     end
   end
-  
+# Working  
   def show_details(article)
     puts   
   end
