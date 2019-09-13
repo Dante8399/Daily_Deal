@@ -1,5 +1,6 @@
 class Scraper
-  
+
+# Scrapes initial page and returns list of articles as an array, assigned to article_elements variable  
   def self.scrape_article_list
     html = open("https://www.fws.gov/endangered/news/index.html")
     doc = Nokogiri::HTML(html)
@@ -7,7 +8,7 @@ class Scraper
     article_elements = doc.css("div.article")
 
 
-# article_el is the the actual article element (1 of 12) in the array. The css in this method is working on it just as we defined above when pulling specific classes
+# Iterates over article elements array, creating a new Article instance for each and assigning a title, date, and url with the below values. Saves to article_elements
     article_elements.each do |article_el|
       Article.new(
         article_el.css("h2").text, 
@@ -17,7 +18,7 @@ class Scraper
     end
   end
   
-  
+  # Scrapes landing page from url, assigns subtitle from page to news_sub_title variable in Article class
   def self.scrape_article(article)
     doc = Nokogiri::HTML(open(article.url))
     article.news_sub_title = doc.css('div.NewsSubTitle').text
