@@ -20,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Run 'ruby bin/endangered_species_news' and follow prompts 
 
 ## Development
 
