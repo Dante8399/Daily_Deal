@@ -1,8 +1,6 @@
 # DailyDeal
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/Daily_Deal`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This gem, although named 'Daily-Deal', provides an interactive scrape of the US FWS endangered species site. With this gem, you can parse the list of the most up-to-date articles with the option of requesting more information on any of them. This will opn a brief description of the article, as well as provide a link to the FWS page that provides full detail.
 
 ## Installation
 
