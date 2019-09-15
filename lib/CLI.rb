@@ -56,6 +56,7 @@ end
   def show_details(article)
   Scraper.scrape_article(article)
    puts "Article Description:
+  
    #{article.news_sub_title}
    
    
