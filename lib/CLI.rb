@@ -34,7 +34,7 @@ class CLI
   end
 
           # Scrapes url page of selected article and returns subtitle   
-    Scraper.scrape_article(article)
+    
  end
 end
     
@@ -52,8 +52,9 @@ end
   end
 # Working  
   def show_details(article)
+  Scraper.scrape_article(article)
    puts "Article Description:
-   #{article.description}
+   #{article.news_sub_title}
    For the Complete Article, visit: #{article.url}"
    
     

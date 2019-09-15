@@ -20,11 +20,11 @@ class Scraper
   end
   # article_elements array with updated values
   
-  # This next method operates on article_elements array, assigning each article to the 'article' variable and iterating over it
-  # Scrapes landing page from url, assigns subtitle from page to news_sub_title variable in Article class
+  
   def self.scrape_article(article)
     doc = Nokogiri::HTML(open(article.url))
     article.news_sub_title = doc.css('div.NewsSubTitle').text
+    
     #add method to the Article class that represents a variable for some element scraped on this page
     #Call the method (article.whatever) and set it equal to the element on this page
   end
