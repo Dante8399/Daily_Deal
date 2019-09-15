@@ -22,7 +22,7 @@ class CLI
            input2 = gets.strip
            article = Article.all[input2.to_i-1]
            puts show_details(article)
-           sleep 5
+           sleep 15
     list_articles
            
         else 
