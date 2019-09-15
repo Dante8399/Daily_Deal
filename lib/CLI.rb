@@ -47,7 +47,9 @@ end
   def list_articles
 # Returns entire list of articles, with an index, and puts the index (+1) and the article title (from title method in Article class)    
     Article.all.each_with_index do |art, i|
-      puts "#{i + 1}. #{art.date}. #{art.title}"
+      puts "#{i + 1}. #{art.date}. #{art.title}
+      
+      "
     end
   end
 # Working  
@@ -55,6 +57,8 @@ end
   Scraper.scrape_article(article)
    puts "Article Description:
    #{article.news_sub_title}
+   
+   
    For the Complete Article, visit: #{article.url}"
    
     
