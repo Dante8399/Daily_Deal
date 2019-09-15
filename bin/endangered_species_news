@@ -4,4 +4,7 @@ require "bundler/setup"
 require "Daily_Deal"
 require_relative '../config/environment.rb'
 
+puts "Welcome to the Up-to-date Article List of How the US Governemnt is Working to Preserve Endangered Species"
+sleep 3
+
 CLI.new.call
