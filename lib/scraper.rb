@@ -24,9 +24,6 @@ class Scraper
   def self.scrape_article(article)
     doc = Nokogiri::HTML(open(article.url))
     article.news_sub_title = doc.css('div.press-release-body p')[0].text
-    
-    #add method to the Article class that represents a variable for some element scraped on this page
-    #Call the method (article.whatever) and set it equal to the element on this page
   end
   
 end

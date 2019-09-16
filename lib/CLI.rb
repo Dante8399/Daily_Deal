@@ -3,13 +3,10 @@
 class CLI
   def call
     Scraper.scrape_article_list
-    #puts 'Welcome to the Up-to-date Article List of How the US Governemnt is Working to Preserve Endangered Species'
     sleep 3
     list_articles
-              # Runs scraper of initial site that returns list of articles (.scrape_article_list method). Assigned to .call method. First puts some text. Returns a list of articles with list_articles variable (see below).
+              # Runs scraper of initial site that returns list of articles (.scrape_article_list method). Assigned to .call method.  Returns a list of articles with list_articles variable (see below).
     
-              # puts 'Would You Like to Select an Aritcle Number for More Info? y/n'
-              # Asks for user input to choose an article    
      loop do
            puts 'Would You Like to Select an Aritcle Number for More Info? y/n'
 
@@ -32,13 +29,11 @@ class CLI
           # Assigns a particular article choice from Article.all array (input from user to choose index of selected article) and assigns to 'article' variable    
     article = Article.all[input2.to_i-1]
   end
-
-          # Scrapes url page of selected article and returns subtitle   
     
  end
 end
     
-    #puts show_details(article)
+    
 
     
     
@@ -52,7 +47,7 @@ end
       "
     end
   end
-# Working  
+ 
   def show_details(article)
   Scraper.scrape_article(article)
    puts "Article Description:
